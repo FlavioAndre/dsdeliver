@@ -25,7 +25,7 @@ export default function Orders() {
     if(isFocused){
       fetchData();
     }
-  }, [fetchData]);
+  }, [isFocused]);
 
   const handleOnPress = (order: Order) => {
     navigation.navigate('OrderDetails', {order});
