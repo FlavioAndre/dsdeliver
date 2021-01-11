@@ -39,14 +39,14 @@ export default function Orders() {
         {isLoading ? (
           <Text>Buscando pedidos...</Text>
         ) : (
-            orders.map(order => {
+            orders.map(order => (
               <TouchableWithoutFeedback 
                 key={order.id} 
                 onPress={() => handleOnPress(order)}
               >
                 <OrderCard order={order} />
               </TouchableWithoutFeedback>
-            })
+            ))
           )
         }
       </ScrollView>

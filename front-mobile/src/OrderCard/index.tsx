@@ -40,9 +40,9 @@ function OrderCard({order} : Props) {
                 {dateFromNow(order.moment)}
             </Text>
             <View style={styles.productsList}>
-                {order.products.map(product => {
+                {order.products.map(product => (
                     <Text key={product.id} style={styles.text}>{product.name}</Text>
-                })}
+                ))}
             </View>
         </View>
     )
